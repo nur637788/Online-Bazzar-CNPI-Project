@@ -59,10 +59,10 @@ function Contact() {
             <div className='text-center -mt-15'>
                 <h2 className='text-3xl font-bold text-center'>Contact</h2>
                 <p className='mt-2'>We are available 24/7, 7 days a week.</p>
-                <p className=''>Phone: +8801611112222</p>
+                <p className=''>Phone: +8801749535688</p>
             </div>
-            <form onSubmit={handelSubmit}>
-                <h3 className='text-xl text-center font-bold py-4'>Send a Message</h3>
+            <form onSubmit={handelSubmit} className='border border-gray-300 p-4 m-2 rounded-md '>
+                <h3 className='text-xl text-center font-bold pb-6'>Send a Message</h3>
                 <div className='flex flex-col gap-5'>
                     <div className='flex gap-3'>
                         <input type="text" placeholder='Fisrt name' required value={fisrtName}
@@ -72,7 +72,7 @@ function Contact() {
                     </div>
                     <input type="email" placeholder='Your mail' required value={email}
                         onChange={(e) => setEmail(e.target.value)} className='border border-gray-400 py-2 px-3 rounded-full' />
-                    <textarea rows={4} placeholder='Description' required value={massage}
+                    <textarea rows={4} placeholder='Massage' required value={massage}
                         onChange={(e) => setMassage(e.target.value)} className='border border-gray-400 px-2 py-1 rounded'></textarea>
                     <button type='submit' className='bg-gray-800 hover:bg-gray-950 py-1 rounded-full text-white cursor-pointer'>Submit</button>
                 </div>

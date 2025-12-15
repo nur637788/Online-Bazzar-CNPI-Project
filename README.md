@@ -1,4 +1,4 @@
-# Chez Tati — Restaurant Website
+# Online-Bazzar Website
 
 A modern, responsive restaurant website built using **HTML, CSS (Tailwind)**, **JavaScript** and **JavaScript**. The website showcases menu items, restaurant details, customer testimonials, and an elegant reservation/contact system.
 
@@ -6,7 +6,7 @@ A modern, responsive restaurant website built using **HTML, CSS (Tailwind)**, **
 
 ## 🚀 Live Demo
 
-*(https://cheztati.netlify.app/)*
+*(https://onlinebazzar.netlify.app/)*
 
 ---
 
@@ -41,7 +41,7 @@ A modern, responsive restaurant website built using **HTML, CSS (Tailwind)**, **
 1. Clone the repository:
 
 ```
-git clone https://github.com/nur637788/Chez-Tati-Website
+git clone https://github.com/nur637788/Online-Bazzar-CNPI-Project
 ```
 
 2. Go into the folder:
@@ -89,6 +89,6 @@ This project is licensed under the **MIT License**.
 
 ---
 
-### 👨‍🍳 Developed for **Chez Tati Restaurant Website**
+### 👨‍🍳 Developed for **Online-Bazzar Website**
 
 Crafted with ❤️ and clean code.

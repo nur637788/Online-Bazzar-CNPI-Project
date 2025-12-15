@@ -21,7 +21,7 @@ export default function Cart() {
                     {items.map(item => (
                         <div key={item.id} className="flex flex-col gap-4  justify-between p-4 border border-gray-300 rounded relative shadow-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                             <div className="flex items-center gap-4">
-                                <img src={item.thumbnail} className="w-20 h-20 rounded" alt={item.title} />
+                                <img src={item.thumbnail} loading="lazy" className="w-20 h-20 rounded" alt={item.title} />
                                 <div>
                                     <h2 className="font-semibold">{item.title}</h2>
                                     <p>${item?.total ? item.total.toFixed(2) : '0.00'}</p>

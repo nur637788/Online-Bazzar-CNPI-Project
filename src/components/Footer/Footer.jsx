@@ -1,4 +1,4 @@
-import { CarrotIcon, CarTaxiFront } from 'lucide-react';
+
 import React, { useState } from 'react'
 import { AiFillProduct } from 'react-icons/ai';
 import { FaFacebook, FaInstagram, FaQuestionCircle, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -7,7 +7,7 @@ import { IoMdContacts } from 'react-icons/io';
 import { IoCartSharp } from 'react-icons/io5';
 import { LuCookie } from 'react-icons/lu';
 import { MdAccountBox, MdFavorite, MdOutlinePrivacyTip } from 'react-icons/md';
-import { RiAdvertisementFill, RiTeamFill } from 'react-icons/ri';
+import { RiTeamFill } from 'react-icons/ri';
 import { SiGooglemarketingplatform } from 'react-icons/si';
 import { TbAirConditioning } from 'react-icons/tb';
 import { Link } from 'react-router-dom'
@@ -42,20 +42,23 @@ function Footer() {
                     </form>
 
                 </aside>
+                {/* Follow Now Area */}
                 <nav>
                     <h6 className=" text-gray-300 font-bold text-xl">Follow Now</h6>
-                    <a className="link link-hover flex gap-2 items-center"><FaFacebook /> Facbook</a>
-                    <a className="link link-hover flex gap-2 items-center"><FaInstagram /> Instagram</a>
-                    <a className="link link-hover flex gap-2 items-center"><FaTwitter /> Twitter</a>
-                    <a className="link link-hover flex gap-2 items-center"><FaYoutube /> YouTube</a>
+                    <a href='https://www.facebook.com/' target='_blank' className="link link-hover flex gap-2 items-center"><FaFacebook /> Facbook</a>
+                    <a href='https://www.instagram.com/' target='_blank' className="link link-hover flex gap-2 items-center"><FaInstagram /> Instagram</a>
+                    <a href='https://www.x.com/' target='_blank' className="link link-hover flex gap-2 items-center"><FaTwitter /> Twitter</a>
+                    <a href='https://www.youtube.com/' target='_blank' className="link link-hover flex gap-2 items-center"><FaYoutube /> YouTube</a>
                 </nav>
+                {/* Services Area */}
                 <nav>
                     <h6 className=" text-gray-300 font-bold text-xl">Services</h6>
-                    <a className="link link-hover flex gap-2 items-center"><AiFillProduct /> Products</a>
+                    <Link to='/allproducts' className="link link-hover flex gap-2 items-center"><AiFillProduct /> Products</Link>
                     <Link to={'/editprofile'} className="link link-hover flex gap-2 items-center"><MdAccountBox />Account</Link>
                     <a className="link link-hover flex gap-2 items-center"><SiGooglemarketingplatform /> Marketing</a>
                     <Link to='/faqs' className="link link-hover flex gap-2 items-center"><FaQuestionCircle /> FAQs</Link>
                 </nav>
+                {/* Website Area */}
                 <nav>
                     <h6 className="text-gray-300 font-bold text-xl">Website</h6>
                     <Link to='/about' className="link link-hover flex gap-2 items-center"><FcAbout /> About us</Link>
@@ -63,6 +66,7 @@ function Footer() {
                     <Link to='/favorite' className="link link-hover flex gap-2 items-center"><MdFavorite /> Favorite</Link>
                     <Link to='/cart' className="link link-hover flex gap-2 items-center"><IoCartSharp />  Cart</Link>
                 </nav>
+                {/* Legal Links Area */}
                 <nav>
                     <h6 className="text-gray-300 font-bold text-xl">Legal Links</h6>
                     <Link to='/temsAndUse' className="link link-hover flex gap-2 items-center"><TbAirConditioning /> Teams of use</Link>
@@ -70,6 +74,7 @@ function Footer() {
                     <Link to='/cookiepolicy' className="link link-hover flex gap-2 items-center"><LuCookie /> Cookie policy</Link>
                     <Link to='/team' className="link link-hover flex gap-2 items-center"><RiTeamFill /> Our Team</Link>
                 </nav>
+                {/* Copy Rights area  */}
             </footer>
             <hr className='text-gray-500' />
             <footer className="text-center bg-gray-700 text-sm text-gray-400 py-2">

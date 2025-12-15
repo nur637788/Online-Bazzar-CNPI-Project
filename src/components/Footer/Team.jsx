@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
 import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Team = () => {
@@ -14,7 +13,7 @@ const Team = () => {
             email: ""
         },
         {
-            name: "Abdun Nur",
+            name: "Samiul Alom",
             role: "Team Leader",
             img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
             facebook: " ",
@@ -31,17 +30,61 @@ const Team = () => {
             linkedin: " ",
             email: ""
         },
-
+        {
+            name: "Abdun Nur",
+            role: "Team Leader",
+            img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
+            facebook: " https://www.facebook.com/nur637788",
+            instagram: " ",
+            linkedin: " ",
+            email: ""
+        },
+        {
+            name: "Samiul Alom",
+            role: "Team Leader",
+            img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
+            facebook: " ",
+            instagram: " ",
+            linkedin: " ",
+            email: ""
+        },
+        {
+            name: "Abdun Nur",
+            role: "Team Leader",
+            img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
+            facebook: " ",
+            instagram: " ",
+            linkedin: " ",
+            email: ""
+        },
+        {
+            name: "Abdun Nur",
+            role: "Team Leader",
+            img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
+            facebook: " https://www.facebook.com/nur637788",
+            instagram: " ",
+            linkedin: " ",
+            email: ""
+        },
+        {
+            name: "Samiul Alom",
+            role: "Team Leader",
+            img: "https://tse2.mm.bing.net/th/id/OIP.ydDEFtiADgNw6f0SKaJZugHaHa?pid=ImgDet&w=203&h=203&c=7&dpr=1.6&o=7&rm=3",
+            facebook: " ",
+            instagram: " ",
+            linkedin: " ",
+            email: ""
+        },
     ];
 
     return (
         <div>
             <section className="bg-gray-900 py-10 px-6 md:px-20 text-gray-800 dark:text-gray-100 min-h-screen rounded">
                 <div className=" mx-auto text-center">
-                    <h1 className="text-4xl font-bold text-green-700 dark:text-green-400 mb-4" data-aos="fade-up">
+                    <h1 className="text-4xl font-bold text-green-700 dark:text-green-400 mb-4" >
                         Our Honorable Team
                     </h1>
-                    <p className="text-gray-600 dark:text-gray-400 mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <p className="text-gray-600 dark:text-gray-400 mb-12">
                         Meet the dedicated team member of our 'Online-Bazzar' Website who guide with knowledge and values.
                     </p>
 
@@ -51,8 +94,8 @@ const Team = () => {
                             <div
                                 key={index}
                                 className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-green-400/40 py-5 px-10  transition-transform ">
-                                <div className="overflow-hidden border-4 border-green-500 rounded-full" >
-                                    <img src={person.img} alt={person.name}
+                                <div className="overflow-hidden border-4 border-green-500 rounded-full w-fit m-auto" >
+                                    <img src={person.img} alt={person.name} loading="lazy"
                                         className="w-30 h-30  mx-auto  object-cover  hover:scale-105 duration-300" />
                                 </div>
 

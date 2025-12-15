@@ -40,9 +40,9 @@ export default function ProductDetails() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* LEFT - Product Image */}
         <img
-          className="w-70 h-70 object-cover rounded-lg border border-gray-100 mx-auto"
+          className="w-70 h-70 object-cover rounded-lg border border-gray-200 hover:bg-gray-100 mx-auto cursor-pointer"
           src={product?.thumbnail}
-          alt={product.title}
+          alt={product.title} loading="lazy"
         />
 
         {/* RIGHT - Product Info */}
@@ -129,20 +129,20 @@ export default function ProductDetails() {
         <h2 className="font-bold text-xl mb-2">Customer Reviews</h2>
         {product?.reviews.map((review) => (
           <div key={review.index}
-            className="bg-gray-50 p-2 border border-gray-300 rounded my-2">
-            <div className="flex justify-between items-center">
+            className="bg-gray-50 p-2 border border-gray-200 rounded my-2 hover:-translate-y-1 duration-300 cursor-pointer">
+            <div className="flex justify-between items-center ">
               <h4 className="font-semibold text-xl">{review.reviewerName}</h4>
-              <p className="md:text-base text-[8px]">{review.date}</p>
+              <p className="md:text-base text-[8px] text-gray-500">{review.date}</p>
             </div>
             <p className="text-gray-700">
               {"⭐".repeat(review.rating)}
             </p><hr className="text-gray-200 my-1" />
-            <p>{review.comment}</p>
+            <p className="text-gray-700">{review.comment}</p>
           </div>
         ))}
       </div>
       {/* --------Product Return Policy:---------- */}
-      <div className="flex flex-col bg-gray-50 rounded space-y-1 border border-gray-100 w-fit m-auto px-6 py-2 mt-5 hover:bg-gray-200">
+      <div className="flex flex-col bg-gray-50 rounded space-y-1 border border-gray-100 w-fit m-auto px-6 py-2 mt-5 hover:bg-gray-200 text-gray-700">
         <p><b>Return Policy: </b>{product.returnPolicy}</p>
         <p><b>Minimum Order Quantity: </b>{product.minimumOrderQuantity}</p>
         <p><b>CreatedAt: </b>{product.meta.createdAt}</p>

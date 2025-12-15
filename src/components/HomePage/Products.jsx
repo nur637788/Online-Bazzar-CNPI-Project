@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { toggleFavorite } from "../../Redux/favoriteSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { IoIosHeartEmpty, IoMdHeart } from "react-icons/io";
@@ -16,7 +16,7 @@ function Products() {
   useEffect(() => {
     fetch("https://dummyjson.com/products?limit=194")
       .then((res) => res.json())
-      .then((data) => setProducts(data.products.slice(180, 194)))
+      .then((data) => setProducts(data?.products.slice(165, 173)))
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
   if (!products || products.length == 0)
@@ -27,26 +27,26 @@ function Products() {
       <div className="flex justify-between items-center">
         <h4 className="text-2xl font-bold">Products</h4>
         <div className="flex gap-1 md:gap-3">
-          <Link to='/newProducts'>
+          <NavLink to='/newProducts'>
             <button className="border px-2 md:px-4 py-1 rounded-full md:text-sm text-[8px] hover:shadow-lg hover:scale-95 transition duration-300 cursor-pointer">
               New Product
             </button>
-          </Link>
-          <Link to='/discount'>
+          </NavLink>
+          <NavLink to='/discount'>
             <button className="border px-2 md:px-4 py-1 rounded-full md:text-sm text-[8px] hover:shadow-lg hover:scale-95 transition duration-300 cursor-pointer">
               Discount
             </button>
-          </Link>
-          <Link to='/popular'>
+          </NavLink>
+          <NavLink to='/popular'>
             <button className="border px-2 md:px-4 py-1 rounded-full md:text-sm text-[8px] hover:shadow-lg hover:scale-95 transition duration-300 cursor-pointer">
               Popular
             </button>
-          </Link>
+          </NavLink>
         </div>
       </div>
 
       {/* Product Grid Area */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-5 mt-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-y-5 gap-x-3 mt-3">
         {products.map((pro) => {
           const isFav = items.some((fav) => fav.id === pro.id);
           return (
@@ -54,13 +54,13 @@ function Products() {
               key={pro.id}
               className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg hover:-translate-y-1 transition duration-300"
               onClick={() => navigate(`/product/${pro.id}`)}>
-              <div className="w-full">
+              <div className="w-full h-50">
                 <img className="w-full h-full object-cover rounded-t-2xl"
-                  src={pro.thumbnail} alt={pro.title} />
+                  src={pro.thumbnail} alt={pro.title} loading="lazy" />
               </div>
 
               <div className="p-2">
-                <p>{pro.title.slice(0, 15)}</p>
+                <p className="truncate">{pro.title}</p>
                 <div className="flex justify-between items-center">
                   <p>${pro.price}</p>
 

@@ -14,11 +14,15 @@ function Discount() {
   useEffect(() => {
     fetch("https://dummyjson.com/products?limit=194")
       .then((res) => res.json())
-      .then((data) => setProducts(data.products.slice(80, 97)))
+      .then((data) => setProducts(data?.products.slice(80, 97)))
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
   if (!products || products.length == 0)
     return <p className="text-center text-red-700 mt-10">Loading...</p>;
+
+  const getDiscountPrice = (price, discount) =>
+    (price - (price * discount) / 100).toFixed(2);
+
 
   return (
     <section className="w-full">
@@ -27,13 +31,17 @@ function Discount() {
         <p className="text-xl font-bold mb-2">Result: {products.length} </p>
       </div>
       {/* Product Grid Area */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 gap-x-3">
         {products.map((pro) => {
           const isFav = items.some((fav) => fav.id === pro.id);
+          const discountPrice = getDiscountPrice(
+            pro.price,
+            pro.discountPercentage
+          );
           return (
             <div
               key={pro.id}
-              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition"
+              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition relative"
               onClick={() => navigate(`/product/${pro?.id}`)}>
               <div className="w-full h-50 ">
                 <img
@@ -41,11 +49,19 @@ function Discount() {
                   src={pro.thumbnail}
                   alt={pro.title} />
               </div>
+              <div className="absolute top-1 right-2 bg-amber-400 px-2 rounded text-gray-600">
+                <p className="text-sm">{pro.discountPercentage}% Off</p>
+              </div>
 
               <div className="p-2">
-                <p>{pro.title.slice(0, 15)}</p>
+                <h2 className="truncate">
+                  {pro.title}</h2>
                 <div className="flex justify-between items-center">
-                  <p>${pro.price}</p>
+                  {/* Price Section */}
+                  <div className="flex items-center gap-1">
+                    <p className="line-through text-gray-500 text-[10px] md:text-sm">${pro?.price}</p>
+                    <p className="font-semibold text-amber-600 text-sm md:text-base"> ${discountPrice}</p>
+                  </div>
 
                   {/* ❤️ Favorite Button */}
                   <button onClick={(e) => {

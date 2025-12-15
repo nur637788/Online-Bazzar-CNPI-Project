@@ -30,10 +30,13 @@ import PrivacyPolicy from "./components/Footer/PrivacyPolicy";
 import FAQs from "./components/Footer/FAQs";
 import EditProfile from "./components/ProfilePage/EditProfile";
 import ReviewPage from "./components/ProfilePage/ReviewPage";
+import AddProduct from "./components/ProfilePage/AddProduct";
 import TemsAndUse from "./components/Footer/TeamsAndUse";
 import CookiePolicy from "./components/Footer/CookiePolicy";
 import Team from "./components/Footer/Team";
-import AddProduct from "./components/ProfilePage/Dasboard/AddProduct";
+import Category from "./components/HomePage/Category";
+import CategoryProducts from "./pages/CategoryProducts";
+
 
 
 function App() {
@@ -74,6 +77,11 @@ function App() {
         { path: "/temsAndUse", element: <TemsAndUse /> },
         { path: "/cookiePolicy", element: <CookiePolicy /> },
         { path: "/team", element: <Team /> },
+
+        { path: "/", element: <Category /> },
+        { path: "/products/:category", element: <CategoryProducts /> }
+
+
 
 
 

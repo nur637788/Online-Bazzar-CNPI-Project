@@ -63,7 +63,7 @@ export default function AboutHero() {
                     <dl className="mt-5 grid grid-cols-2 gap-5 lg:grid-cols-4">
                         {stats.map((stat) => (
                             <div key={stat.name} className="flex flex-col-reverse  gap-1">
-                                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
+                                <dt className="text-sm text-gray-300 font-semibold">{stat.name}</dt>
                                 <img className="tracking-tight w-30 h-24 rounded hover:scale-105 duration-300" src={stat.value}></img>
                             </div>
                         ))}

@@ -62,29 +62,29 @@ function ProductSlider() {
                     <h2 className='text-2xl md:text-4xl font-bold w-70 md:w-96'>Customer experience is important to us</h2>
                     <p className='text-sm md:text-lg max-w-2xl text-[#EA5326] leading-6'>Sed dictum ipsum elementum diam dapibus, ut sodales orci monte consectetur. Fusce a mollis lorem. Orci varius natoque penatibus.</p>
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-5 justify-evenly mt-8'>
-                        <div className='space-y-2'>
-                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg'>
+                        <div className='rounded-lg hover:bg-gray-100 hover:scale-105 duration-300 p-3 m-auto cursor-pointer'>
+                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg m-auto'>
                                 <img className='w-6 h-6' src="/icons/icon1.png" alt="icon1" />
                             </div>
-                            <h5 className='font-semibold'>Original Products</h5>
+                            <h5 className='font-semibold mt-2'>Original Products</h5>
                         </div>
-                        <div className='space-y-2'>
-                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg'>
+                        <div className='rounded-lg hover:bg-gray-100 hover:scale-105 duration-300 p-3 m-auto cursor-pointer'>
+                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg m-auto'>
                                 <img className='w-6 h-6' src="/icons/icon2.png" alt="icon2" />
                             </div>
-                            <h5 className='font-semibold'>Satisfaction Guarantee</h5>
+                            <h5 className='font-semibold mt-2'>Satisfaction Guarantee</h5>
                         </div>
-                        <div className='space-y-2'>
-                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg'>
+                        <div className='rounded-lg hover:bg-gray-100 hover:scale-105 duration-300 p-3 m-auto cursor-pointer'>
+                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg m-auto'>
                                 <img className='w-6 h-6' src="/icons/icon3.png" alt="icon3" />
                             </div>
-                            <h5 className='font-semibold'>New Arrival Everyday</h5>
+                            <h5 className='font-semibold mt-2'>New Arrival Everyday</h5>
                         </div>
-                        <div className='space-y-2'>
-                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg'>
+                        <div className='rounded-lg hover:bg-gray-100 hover:scale-105 duration-300 p-3 m-auto cursor-pointer'>
+                            <div className='bg-[#EA5326] w-10 h-10 flex items-center justify-center rounded-lg m-auto'>
                                 <img className='w-8 h-6' src="/icons/icon4.png" alt="icon4" />
                             </div>
-                            <h5 className='font-semibold'>Fast Shipping</h5>
+                            <h5 className='font-semibold mt-2'>Fast Shipping</h5>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ function ProductSlider() {
                 <p className="text-sm">We provide support for more than 15K+ Businesses.</p>
             </div>
             <div className="flex gap-5 bg-white shadow-sm py-5 max-w-[700px] m-auto px-5 rounded-md">
-                <img src={products[current].image} alt={products[current].title}
+                <img src={products[current].image} loading="lazy" alt={products[current].title}
                     className="w-20 md:w-40 h-20 md:h-40 rounded-sm mx-auto shadow-md object-cover" />
                 <div className="space-y-1">
                     <p className="text-gray-900 text-sm">{products[current].desc}</p>

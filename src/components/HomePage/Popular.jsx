@@ -27,13 +27,13 @@ function Popular() {
         <p className="text-xl font-bold mb-2">Result: {products.length} </p>
       </div>
       {/* Product Grid Area */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 gap-x-3">
         {products.map((pro) => {
           const isFav = items.some((fav) => fav.id === pro.id);
           return (
             <div
               key={pro.id}
-              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition"
+              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition relative"
               onClick={() => navigate(`/product/${pro?.id}`)}>
               <div className="w-full h-50 ">
                 <img
@@ -41,9 +41,11 @@ function Popular() {
                   src={pro.thumbnail}
                   alt={pro.title} />
               </div>
-
+              <div className="absolute top-1 right-2 bg-blue-500 px-1 rounded text-gray-200">
+                <p className="text-sm">Popular</p>
+              </div>
               <div className="p-2">
-                <p>{pro.title.slice(0, 15)}</p>
+                <p className="truncate">{pro.title}</p>
                 <div className="flex justify-between items-center">
                   <p>${pro.price}</p>
 

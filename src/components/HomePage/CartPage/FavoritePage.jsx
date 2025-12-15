@@ -11,7 +11,7 @@ export default function FavoritePage() {
         <div className="text-black w-full ">
             <p className="mb-4 md:text-xl flex justify-between">
                 <span className="font-semibold">Favorite</span>
-                 <span className="">Total Favorites: {items.length}</span>
+                <span className="">Total Favorites: {items.length}</span>
             </p>
 
             {items.length === 0 ? (
@@ -24,7 +24,7 @@ export default function FavoritePage() {
                             <div className="bg-gray-50 border border-gray-300 p-4 rounded relative cursor-pointer shadow-blue-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
 
                                 <img
-                                    src={item.thumbnail}
+                                    src={item.thumbnail} loading="lazy"
                                     className="w-40 h-40 object-cover rounded m-auto" />
                                 {/* Unlove Button */}
                                 <button onClick={(e) => {
@@ -36,8 +36,9 @@ export default function FavoritePage() {
                                     ❤️
                                 </button>
 
-                                <h2 className="font-bold text-lg mt-2">{item.title.slice(0, 15)}</h2>
-                                <p className="opacity-80">Price: ${item.price}</p>
+                                <h2 className="font-semibold text-base md:text-lg mt-2 truncate">
+                                    {item.title}</h2>
+                                <p className="opacity-80 text-sm md:text-base">Price: ${item.price}</p>
                             </div>
                         </Link>
                     ))}

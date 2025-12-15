@@ -49,7 +49,7 @@ function AllProducts() {
                         onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='px-2 border border-gray-300 rounded w-30 md:w-45' />
 
                     {/* ===== Category Area ===== */}
-                    <div className="mt-5 text-[10px] md:text-base">
+                    <div className="mt-2 text-[10px] md:text-base">
                         <button
                             onClick={() => setOpen(!open)}
                             className="font-bold">
@@ -57,7 +57,7 @@ function AllProducts() {
                         </button>
 
                         {open && (
-                            <div className="mt-2 space-y-1">
+                            <div className="mt-1 space-y-1">
                                 {["All Category", "mens-shoes", "laptops", "smartphones", "mens-shirts", "mens-watches",
                                     "mobile-accessories", "womens-dresses", "womens-jewellery", "womens-shoes", "motorcycle", "skin-care",
                                 ].map((item) => (
@@ -129,12 +129,12 @@ function AllProducts() {
                                     {/* ===== Product Info ====== */}
                                     <div className="w-full">
                                         <img className="w-full h-full object-cover rounded-t-2xl"
-                                            src={pro?.thumbnail} alt={pro.title} />
+                                            src={pro?.thumbnail} alt={pro.title} loading='lazy' />
                                     </div>
                                     <div className='p-2'>
-                                        <p>{pro.title.slice(0, 15)}</p>
+                                        <h2 className="font-semibold text-base md:text-lg truncate"> {pro.title}</h2>
                                         <div className="flex justify-between items-center">
-                                            <p>${pro.price}</p>
+                                            <p className='text-sm'>${pro.price}</p>
                                             {/* ===== Cart Button ====== */}
                                             <button onClick={(e) => {
                                                 e.preventDefault();
