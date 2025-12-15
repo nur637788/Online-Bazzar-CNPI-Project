@@ -1,0 +1,29 @@
+import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer/Footer'
+import { Outlet } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import SearchResult from './SearchResult';
+
+function Layout() {
+    const search = useSelector((state) => state.search.query);
+    return (
+        <div className='bg-white text-black'>
+            <div className=''>
+                <Navbar />
+            </div>
+
+            {search ? (
+                <SearchResult />) : (
+                <div>
+                    <div className='max-w-6xl px-5 py-5 mt-13 flex items-center justify-center min-h-screen m-auto'>
+                        <Outlet />
+                    </div>
+                    <Footer />
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default Layout
