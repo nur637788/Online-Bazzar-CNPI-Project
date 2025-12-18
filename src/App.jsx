@@ -77,7 +77,7 @@ function App() {
         { path: "/temsAndUse", element: <TemsAndUse /> },
         { path: "/cookiePolicy", element: <CookiePolicy /> },
         { path: "/team", element: <Team /> },
-
+        // Categorys Link
         { path: "/", element: <Category /> },
         { path: "/products/:category", element: <CategoryProducts /> }
 

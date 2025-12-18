@@ -41,9 +41,8 @@ function CategoryProducts() {
                     return (
                         <div
                             key={pro.id}
-                            className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition"
-                            onClick={() => navigate(`/product/${pro.id}`)}
-                        >
+                            className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg hover:-translate-y-1 duration-300 transition"
+                            onClick={() => navigate(`/product/${pro.id}`)}>
                             <div className="w-full h-50">
                                 <img
                                     className="w-full h-full object-cover rounded-t-2xl"

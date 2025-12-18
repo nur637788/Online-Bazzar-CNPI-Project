@@ -6,28 +6,53 @@ import Category from '../components/HomePage/Category'
 
 function Home() {
   return (
-    <header>
-      <div className=''>
-        <div className='text-center py-5 '>
-          <h1 className='text-2xl md:text-4xl lg:text-6xl  m-auto py-2'><b>The Best    High-Quality</b> <br /> Home Appliance <b>Products</b></h1>
-          <p className='py-4'>200+ Collections for your outfit inspirations in this summer</p>
-          <Link to='/allproducts' className='bg-black px-10 py-2 rounded-full text-white hover:bg-gray-900 '>View All Products →</Link>
-        </div>
-        <div className='flex-1 md:flex gap-4 py-5 space-y-5'>
-          <div>
-            <img className='rounded-xl' src="/images/hero-image1.png" alt="hero-image1" />
-          </div>
-          <div className='text-center space-y-3'>
-            <img className='m-auto' src="/images/hero-image2.png" alt="hero-image2" />
-            <h3>Electronics Gadgets</h3>
-            <Link to='/allproducts' className='border border-[#FC5A31] text-[#FC5A31] px-5 py-1 rounded-full cursor-pointer hover:scale-105 duration-300'> Shop Now →</Link>
-          </div>
-        </div>
-        <Category />
-        <Products />
-        <CoustomerCard />
+    <header className="overflow-x-hidden">
+      {/* ===== Top Text Section ===== */}
+      <div className="text-center py-5">
+        <h1 className="text-2xl md:text-4xl lg:text-6xl py-2">
+          <b>The Best High-Quality</b> <br />
+          Home Appliance <b>Products</b>
+        </h1>
+
+        <p className="py-4">
+          200+ Collections for your outfit inspirations in this summer
+        </p>
+
+        <Link
+          to="/allproducts"
+          className="bg-black px-10 py-2 rounded-full text-white hover:bg-gray-900"
+        >
+          View All Products →
+        </Link>
       </div>
-    </header >
+
+      {/* ===== Full Width Hero Background ===== */}
+      <div className="w-screen h-[70vh] bg-[url('/images/hero-image1.png')] bg-cover bg-center bg-no-repeat">
+        <div className="h-full flex flex-col justify-center items-center text-center space-y-1 m-auto bg-black/20">
+          <Link to="/allproducts">
+            <img
+              className="w-50"
+              src="/images/hero-image2.png"
+              alt="hero-image2" />
+          </Link>
+
+          <h3 className="text-black font-semibold">
+            Electronics Gadgets
+          </h3>
+
+          <Link
+            to="/allproducts"
+            className="border border-blue-500 text-[#FC5A31] mt-5 px-5 py-1 rounded-full hover:scale-105 duration-300 bg-white/80 text-xl">
+            Shop Now →
+          </Link>
+        </div>
+      </div>
+
+      {/* ===== Other Sections ===== */}
+      <Category />
+      <Products />
+      <CoustomerCard />
+    </header>
   )
 }
 

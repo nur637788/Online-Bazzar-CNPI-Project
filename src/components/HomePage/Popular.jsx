@@ -33,7 +33,7 @@ function Popular() {
           return (
             <div
               key={pro.id}
-              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition relative"
+              className="bg-gray-100 rounded-2xl border border-gray-300 cursor-pointer hover:shadow-lg transition relative hover:-translate-y-1 duration-300"
               onClick={() => navigate(`/product/${pro?.id}`)}>
               <div className="w-full h-50 ">
                 <img

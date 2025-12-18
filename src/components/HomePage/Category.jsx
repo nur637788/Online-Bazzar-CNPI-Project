@@ -151,7 +151,7 @@ const Category = () => {
 
 
     return (
-        <div className="my-5">
+        <div className="my-5 pb-10">
             <div className="flex justify-between items-center">
                 <h2 className="text-base md:text-2xl font-bold">Products Categories</h2>
                 <h2 className="text-base md:text-2xl">

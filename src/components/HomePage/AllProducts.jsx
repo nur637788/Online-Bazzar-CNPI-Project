@@ -14,6 +14,7 @@ function AllProducts() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { items } = useSelector((state) => state.favorites);
+    const [sortType, setSortType] = useState("");
 
     //  JSON data 
     useEffect(() => {
@@ -39,11 +40,28 @@ function AllProducts() {
         return matchTitle || matchPrice || matchBrand || item.category.toLowerCase().includes(search.toLowerCase())
     });
 
+    const sortedProducts = [...filteredData].sort((a, b) => {
+        if (sortType === "name-abc") {
+            return (a.title || "").localeCompare(b.title || "");
+        }
+
+        if (sortType === "name-desc") {
+            return (b.title || "").localeCompare(a.title || "");
+        }
+        if (sortType === "price-abc") {
+            return a.price - b.price;
+        }
+        if (sortType === "price-desc") {
+            return b.price - a.price;
+        }
+        return 0;
+    });
+
     return (
         <div id='up'>
-            <div className='flex gap-2 -mt-4'>
+            <div className='flex gap-2 -mt-4 relative'>
                 {/* ---------Side bar----------- */}
-                <div className='w-35 md:w-50 py-5 '>
+                <div className='w-35 md:w-50 py-5 sticky top-10 self-start'>
                     {/* ----- Search bar ------ */}
                     <input type="search" value={search}
                         onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='px-2 border border-gray-300 rounded w-30 md:w-45' />
@@ -85,10 +103,16 @@ function AllProducts() {
                     {/* ====== Header Sorting and length ======= */}
                     <div className='flex justify-between'>
                         <div className='flex gap-1'>
-                            <p className='hidden md:block'>Sort by</p><select className='border border-gray-300 rounded w-fit cursor-pointer text-gray-500'>
-                                <option value="1">Letest</option>
-                                <option value="2">Discount</option>
-                                <option value="3">Popular</option>
+                            <p className='hidden md:block'>Sort by</p>
+                            <select
+                                className="border md:text-sm text-[10px] border-gray-300 rounded cursor-pointer text-gray-500"
+                                value={sortType}
+                                onChange={(e) => setSortType(e.target.value)}>
+                                <option value="">Select</option>
+                                <option value="name-abc">Name: A-Z</option>
+                                <option value="name-desc">Name: Z-A</option>
+                                <option value="price-abc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
                             </select>
                         </div>
                         <p className='text-sm md:text-base'><b>{filteredData.length}</b> Results</p>
@@ -97,7 +121,7 @@ function AllProducts() {
                     {/* ======= Product Grid Area ======= */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-4">
 
-                        {filteredData.map((pro) => {
+                        {sortedProducts.map((pro) => {
 
                             const isFav = items.some((fav) => fav.id === pro.id);
                             return (
