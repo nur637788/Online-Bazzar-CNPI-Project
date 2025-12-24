@@ -48,7 +48,7 @@ export default function FAQs() {
                 {FAQ_DATA.map((faq, index) => (
                     <div
                         key={index}
-                        className="border border-gray-500 rounded-md cursor-pointer"
+                        className="border border-gray-500 rounded-md cursor-pointer overflow-hidden"
                         onClick={() => toggleFAQ(index)}>
                         <div className="bg-gray-200 rounded-t-md">
                             <div className="flex justify-between items-center p-2">

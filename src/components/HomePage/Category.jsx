@@ -169,7 +169,7 @@ const Category = () => {
                                 <img
                                     src={item.img}
                                     alt={item.title} loading="lazy"
-                                    className="rounded-lg bg-white hover:scale-105 duration-300 h-40 w-40 m-auto"/>
+                                    className="rounded-lg bg-white hover:scale-105 duration-300 h-35 w-40 m-auto"/>
                             </div>
                             <h3 className="text-sm md:text-base font-medium truncate mt-1">
                                 {item.title.charAt(0).toUpperCase() + item.title.slice(1)}

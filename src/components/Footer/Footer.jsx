@@ -22,8 +22,8 @@ function Footer() {
     }
 
     return (
-        <div>
-            <footer className="footer bg-gray-700 text-gray-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5   p-5 md:p-10">
+        <div className='bg-gray-700 text-gray-100'>
+            <footer className="footer max-w-6xl  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 p-5  m-auto">
                 <aside>
                     {/* Logo */}
                     <Link to='/'>

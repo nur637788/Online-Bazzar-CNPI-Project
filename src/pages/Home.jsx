@@ -11,7 +11,7 @@ function Home() {
       <div className="text-center py-5">
         <h1 className="text-2xl md:text-4xl lg:text-6xl py-2">
           <b>The Best High-Quality</b> <br />
-          Home Appliance <b>Products</b>
+          Products from <b> Onlile-Bazzar</b>
         </h1>
 
         <p className="py-4">
@@ -42,7 +42,7 @@ function Home() {
 
           <Link
             to="/allproducts"
-            className="border border-blue-500 text-[#FC5A31] mt-5 px-5 py-1 rounded-full hover:scale-105 duration-300 bg-white/80 text-xl">
+            className="border border-blue-500 text-[#FC5A31] mt-5 px-8 py-2 rounded-full hover:scale-105 duration-300 bg-white/80 text-2xl hover:font-bold">
             Shop Now →
           </Link>
         </div>

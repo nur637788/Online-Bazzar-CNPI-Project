@@ -2,14 +2,14 @@ import React from 'react'
 
 function PrivacyPolicy() {
     return (
-        <div className='max-w-2xl space-y-3 text-[#758888]'>
+        <div className='max-w-2xl space-y-3 '>
             <div>
                 <h1 className=' text-xl md:text-2xl font-bold text-black'>Privacy Policy</h1>
-                <p>Welcome to Bergham Chez Tati Website. Before using our logo design service, please carefully review the following Terms and Conditions, as they govern the contractual relationship between you and Bergham Chez Tati Website the "Products Provider". By using our logo design service, you acknowledge that you have read, understood, and agreed to these Terms and Conditions in their entirety.</p>
+                <p>Welcome to Online-Bazzar Website. Before using our logo design service, please carefully review the following Terms and Conditions, as they govern the contractual relationship between you and Online-Bazzar Website the "Products Provider". By using our logo design service, you acknowledge that you have read, understood, and agreed to these Terms and Conditions in their entirety.</p>
             </div>
             <div>
                 <h2 className=' text-xl md:text-2xl font-bold text-black'>→ What data do we process?</h2>
-                <p><b>a.</b> Bergham Chez Tati will provide custom logo design services to the Client based on the specifications provided by the Client.</p>
+                <p><b>a.</b> Online-Bazzar will provide custom logo design services to the Client based on the specifications provided by the Client.</p>
 
                 <p><b>b.</b> The Service Provider will deliver the final logo design in the agreed-upon format upon completion and full payment of the service fee.</p>
             </div>

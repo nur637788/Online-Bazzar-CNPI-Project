@@ -6,9 +6,9 @@ function ProductSlider() {
             id: 1,
             desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
             star: "⭐⭐⭐⭐⭐",
-            name: "James K.",
-            title: "Traveler",
-            image: "https://img.freepik.com/free-photo/portrait-young-handsome-man-jean-shirt-smiling-with-crossed-arms_176420-12083.jpg?semt=ais_hybrid&w=740&q=80"
+            name: "Abdun Nur",
+            title: "Web Developer",
+            image: "/images/teamMembers/nur.png"
         },
         {
             id: 2,
@@ -16,31 +16,55 @@ function ProductSlider() {
             star: "⭐⭐⭐⭐⭐",
             name: "John Deo.",
             title: "Developer",
-            image: "https://img.freepik.com/free-photo/young-handsome-man-wearing-casual-tshirt-blue-background-happy-face-smiling-with-crossed-arms-looking-camera-positive-person_839833-12963.jpg?semt=ais_hybrid&w=740&q=80"
+            image: "/images/teamMembers/samiul.jpg"
         },
         {
             id: 3,
             desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
             star: "⭐⭐⭐",
-            name: "Weellim.",
+            name: "Fahim Ahmed.",
             title: "Desingner",
-            image: "https://img.freepik.com/premium-photo/young-man-isolated-blue_1368-124991.jpg?semt=ais_hybrid&w=740&q=80"
+            image: "/images/teamMembers/fahim.jpg"
         },
         {
             id: 4,
             desc: " I would like to personally thank you for your outstanding product. Absolutely wonderful!",
             star: "⭐⭐⭐⭐",
-            name: "Jhon Kim.",
-            title: "Business",
-            image: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80"
+            name: "Tamjid",
+            title: "Business Man",
+            image: "/images/teamMembers/tamjid.jpg"
         },
         {
             id: 5,
             desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
             star: "⭐⭐⭐⭐⭐",
-            name: "James K.",
+            name: "Shahin Alom Mim",
             title: "Traveler",
-            image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8fDB8fHww&fm=jpg&q=60&w=3000"
+            image: "/images/teamMembers/shahin.jpg"
+        },
+        {
+            id: 6,
+            desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
+            star: "⭐⭐⭐⭐⭐",
+            name: "Saju Ahmed",
+            title: "Syber Force",
+            image: "/images/teamMembers/saju.jpg"
+        },
+        {
+            id: 7,
+            desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
+            star: "⭐⭐⭐⭐⭐",
+            name: "Kamrul Hasan Sakib",
+            title: "Traveler",
+            image: "/images/teamMembers/sakib.jpg"
+        },
+        {
+            id: 8,
+            desc: "You wont regret it. I would like to personally thank you for your outstanding product. Absolutely wonderful!",
+            star: "⭐⭐⭐⭐⭐",
+            name: "Fahim Faisal",
+            title: "Traveler",
+            image: "/images/teamMembers/foysal.jpg"
         },
 
     ];
@@ -93,15 +117,16 @@ function ProductSlider() {
                 <h2 className="text-2xl md:text-4xl font-bold">What People Are Saying</h2>
                 <p className="text-sm">We provide support for more than 15K+ Businesses.</p>
             </div>
-            <div className="flex gap-5 bg-white shadow-sm py-5 max-w-[700px] m-auto px-5 rounded-md">
+            <div className="flex gap-5 bg-gray-50 shadow-sm py-5 max-w-[700px] m-auto px-5 rounded-md">
                 <img src={products[current].image} loading="lazy" alt={products[current].title}
-                    className="w-20 md:w-40 h-20 md:h-40 rounded-sm mx-auto shadow-md object-cover" />
-                <div className="space-y-1">
-                    <p className="text-gray-900 text-sm">{products[current].desc}</p>
+                    className="w-20 md:w-40 h-30 md:h-40 rounded-sm mx-auto shadow-md object-cover bg-blue-800" />
+                <div className="">
+                    <h2 className="text-xl font-bold ">{products[current].name}</h2>
+                    <p className="text-gray-700 font-medium italic text-sm">{products[current].title}</p>
                     <p className="text-gray-500">{products[current].star}</p>
                     <hr className="my-2 text-gray-300" />
-                    <h2 className="text-xl font-bold ">{products[current].name}</h2>
-                    <p className="text-gray-500 text-sm">{products[current].title}</p>
+                    <p className="text-gray-900 text-sm">{products[current].desc}</p>
+                    
                 </div>
             </div>
 

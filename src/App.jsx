@@ -82,11 +82,6 @@ function App() {
         { path: "/products/:category", element: <CategoryProducts /> }
 
 
-
-
-
-
-
       ],
     },
   ]);

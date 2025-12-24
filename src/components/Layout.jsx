@@ -9,17 +9,19 @@ function Layout() {
     const search = useSelector((state) => state.search.query);
     return (
         <div className='bg-white text-black'>
-            <div className=''>
+            <header >
                 <Navbar />
-            </div>
+            </header>
 
             {search ? (
                 <SearchResult />) : (
                 <div>
-                    <div className='max-w-6xl px-5 py-5 mt-13 flex items-center justify-center min-h-screen m-auto'>
+                    <main className='max-w-6xl px-5 py-5 mt-13 flex items-center justify-center min-h-screen m-auto'>
                         <Outlet />
-                    </div>
-                    <Footer />
+                    </main>
+                    <footer className=''>
+                        <Footer />
+                    </footer>
                 </div>
             )}
         </div>

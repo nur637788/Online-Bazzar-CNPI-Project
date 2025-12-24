@@ -22,8 +22,8 @@ function Navbar() {
 
   return (
     <div className="w-full fixed top-0 z-10">
-      <div className="bg-white shadow-sm">
-        <div className="flex justify-between items-center px-5 md:px-10 xl:px-20 py-3">
+      <div className="bg-white shadow-sm  ">
+        <div className="w-6xl m-auto flex justify-between items-center px-5 py-3">
 
           {/* Logo */}
           <Link to='/'>
