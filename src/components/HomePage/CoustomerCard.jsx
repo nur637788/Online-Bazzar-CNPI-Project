@@ -14,9 +14,9 @@ function ProductSlider() {
             id: 2,
             desc: "Absolutely wonderful! Thank you for your outstanding product. Absolutely wonderful!",
             star: "⭐⭐⭐⭐⭐",
-            name: "John Deo.",
+            name: "Samiul Alom",
             title: "Developer",
-            image: "/images/teamMembers/samiul.jpg"
+            image: "/images/teamMembers/samiul.jpeg"
         },
         {
             id: 3,

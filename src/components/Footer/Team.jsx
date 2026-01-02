@@ -15,7 +15,7 @@ const Team = () => {
         {
             name: "Samiul Alom",
             role: "CO-Team Leader",
-            img: "/images/teamMembers/samiul.heic",
+            img: "/images/teamMembers/samiul.jpeg",
             facebook: "https://www.facebook.com/share/1GAsWMygM4/",
             instagram: "https://www.instagram.com/samiul__alom__?igsh=MWp5ZTllY2p4aHpvYg==",
             linkedin: "",

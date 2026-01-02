@@ -29,7 +29,7 @@ function Home() {
       {/* ===== Full Width Hero Background ===== */}
       <div className="w-screen h-[70vh] bg-[url('/images/hero-image1.png')] bg-cover bg-center bg-no-repeat">
         <div className="h-full flex flex-col justify-center items-center text-center space-y-1 m-auto bg-black/20">
-          <Link to="/allproducts">
+          {/* <Link to="/allproducts">
             <img
               className="w-50"
               src="/images/hero-image2.png"
@@ -38,11 +38,11 @@ function Home() {
 
           <h3 className="text-black font-semibold">
             Electronics Gadgets
-          </h3>
+          </h3> */}
 
           <Link
             to="/allproducts"
-            className="border border-blue-500 text-[#FC5A31] mt-5 px-8 py-2 rounded-full hover:scale-105 duration-300 bg-white/80 text-2xl hover:font-bold">
+            className="border border-blue-500 text-[#FC5A31] mt-5 px-8 py-2 rounded-full hover:scale-105 duration-300 bg-white/80 text-2xl hover:font-bold hover:bg-blue-500">
             Shop Now →
           </Link>
         </div>
